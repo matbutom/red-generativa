@@ -1,0 +1,52 @@
+constellation:
+  name: "red_regenerativa"
+nodes:
+  - id: suelo
+    label: "suelo vivo"
+  - id: agua
+    label: "agua"
+  - id: semilla
+    label: "semilla"
+  - id: bosque
+    label: "bosque"
+  - id: biodiversidad
+    label: "biodiversidad"
+  - id: micelio
+    label: "micelio"
+  - id: polinizadores
+    label: "polinizadores"
+  - id: clima
+    label: "clima"
+  - id: energia_solar
+    label: "energía solar"
+  - id: regeneracion
+    label: "regeneración"
+edges:
+  - source: energia_solar
+    target: bosque
+  - source: agua
+    target: suelo
+  - source: suelo
+    target: semilla
+  - source: semilla
+    target: bosque
+  - source: bosque
+    target: biodiversidad
+  - source: biodiversidad
+    target: polinizadores
+  - source: polinizadores
+    target: semilla
+  - source: micelio
+    target: suelo
+  - source: micelio
+    target: bosque
+  - source: clima
+    target: agua
+  - source: clima
+    target: bosque
+  - source: regeneracion
+    target: suelo
+  - source: regeneracion
+    target: agua
+  - source: regeneracion
+    target: biodiversidad
